@@ -67,6 +67,28 @@
             <asp:CheckBox ID="CheckBox2" runat="server" Text="Resta"/>
             <asp:CheckBox ID="CheckBox3" runat="server" Text="Multiplicacion"/>
             <asp:CheckBox ID="CheckBox4" runat="server" Text="Division"/>
+            <br />
+            <br />
+             <asp:Label ID="lResultado4" runat="server" Text="Resultado 4"></asp:Label>
+            <br />
+            <br />
+            <label>Digite un numero: </label>
+            <asp:TextBox ID="txtNum7" runat="server"></asp:TextBox>
+            <label>Digite un segundo numero: </label>
+            <asp:TextBox ID="txtNum8" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="btnOperacion4" runat="server" Text="Calcular" OnClick="btnOperacion4_Click" />
+            <br />
+            <br />
+            <asp:ListBox ID="ListBox1" runat="server">
+                <asp:ListItem Value="Suma"></asp:ListItem>
+                <asp:ListItem>Resta</asp:ListItem>
+                <asp:ListItem>Division</asp:ListItem>
+                <asp:ListItem>Multiplicacion</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+            </asp:ListBox>
+
         </div>
     </form>
 </body>

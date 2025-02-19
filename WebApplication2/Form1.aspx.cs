@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
@@ -15,7 +16,37 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+        
+        //Listbox
+        private void Listb()
+        {
+            if (ListBox1.Text == "Suma")
+            {
+                resultado = float.Parse(txtNum7.Text) + float.Parse(txtNum8.Text);
+            }
+            else if (ListBox1.Text == "Resta")
+            {
+                resultado = float.Parse(txtNum7.Text) - float.Parse(txtNum8.Text);
+            }
+            else if (ListBox1.Text == "Multiplicacion")
+            {
+                resultado = float.Parse(txtNum7.Text) * float.Parse(txtNum8.Text);
+            }
+            else if (ListBox1.Text == "Division")
+            {
+                resultado = float.Parse(txtNum7.Text) / float.Parse(txtNum8.Text);
+            }
+            else
+            {
+                resultado = 0;
+                MessageBox.Show("Debe seleccionar una opcion");
+                Clear(txtNum7, txtNum8);
+            }
 
+            lResultado4.Text = resultado.ToString();
+            Clear(txtNum7, txtNum8);
         }
 
         //Radio
@@ -134,6 +165,11 @@ namespace WebApplication2
         protected void btnOperacion3_Click(object sender, EventArgs e)
         {
             CheckboxOption();
+        }
+
+        protected void btnOperacion4_Click(object sender, EventArgs e)
+        {
+            Listb();
         }
     }
 }
